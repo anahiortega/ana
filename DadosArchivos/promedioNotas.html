@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +9,41 @@
     <script src="serviciosPromediosNotas.js"></script>
 </head>
 <body>
-    <h3>Ingrese la primer nota</h3>
-    <input type="text" name="" id="txtNota1">
+    <h3>Ingrese la primera nota</h3>
+    <input type="text" id="txtNota1">
+    
     <h3>Ingrese la segunda nota</h3>
-    <input type="text" name="" id="txtNota2">
-    <h3>Ingrese la tercer nota</h3>
-    <input type="text" name="" id="txtNota3">
-    <h4 id="lblMensaje"></h4><br>
-    <img src="" alt="" id="imgResultado" width="200px">
-    <input type="button" value="Calcular" onclick="calcularPromedioNotas();"/>
+    <input type="text" id="txtNota2">
+    
+    <h3>Ingrese la tercera nota</h3>
+    <input type="text" id="txtNota3">
+    
+    <h4 id="lblMensaje"></h4>
+    <img src="" alt="Resultado" id="imgResultado" width="200px" style="display:none;">
+    
+    <input type="button" value="Calcular" onclick="calcularPromedioNotas();">
+    
+    <script>
+        // Función para mostrar texto en un elemento
+        function mostrarTexto(id, mensaje) {
+            const elemento = document.getElementById(id);
+            if (elemento) {
+                elemento.innerText = mensaje;
+            } else {
+                console.error(`Elemento con id ${id} no encontrado.`);
+            }
+        }
+
+        // Función para mostrar una imagen en un elemento
+        function mostrarImagen(id, ruta) {
+            const img = document.getElementById(id);
+            if (img) {
+                img.src = ruta;
+                img.style.display = 'block'; // Asegúrate de que la imagen sea visible
+            } else {
+                console.error(`Elemento con id ${id} no encontrado.`);
+            }
+        }
+    </script>
 </body>
 </html>
