@@ -33,3 +33,4 @@ function HOLA() {
     mostrarImagen("imagensaludar", "./imagenes/j9O.gif");
     mostrarTextoEnCaja("txtnombre","")
 }
+
